@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trattamenti | Dott. Roberto Soave</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="navbar" class="glass-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="immagini/logo.png" alt="Logo Roberto Soave">
+                <span style="color:#0f172a">Dott. Roberto Soave</span>
+            </a>
+            <button class="mobile-toggle" aria-label="Menu" id="menu-btn"><i data-lucide="menu"></i></button>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="chi-sono.html">Chi Sono</a>
+                <a href="servizi.html" style="color: var(--clr-primary);">Servizi</a>
+                <a href="contatti.html">Contatti</a>
+                <a href="https://wa.me/393382809121" target="_blank" class="btn btn-wa" style="margin-left:1rem;">
+                    Prenota Ora
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="serv-page">
+        <div class="container">
+            <div class="method-subtitle reveal">Cosa possiamo risolvere</div>
+            <h2 class="reveal delay-1" style="font-size: 3.5rem; color:var(--clr-bg-dark)">I Trattamenti</h2>
+            
+            <div class="serv-grid">
+                <div class="serv-card reveal delay-2">
+                    <h3>Prima Visita Dietistica</h3>
+                    <p>Un'analisi completa e approfondita della tua composizione corporea e delle tue abitudini alimentari per fissare gli obiettivi concreti e scientifici sul lungo periodo.</p>
+                </div>
+                <div class="serv-card reveal delay-3">
+                    <h3>Piano Nutrizionale</h3>
+                    <p>Elaborazione di un regime alimentare personalizzato che supporta il tuo metabolismo, ottimizza i nutrienti in base al tuo stile di lavoro e ti rende invincibile.</p>
+                </div>
+                <div class="serv-card reveal delay-2">
+                    <h3>Visita di Controllo</h3>
+                    <p>Aggiustamenti strategici mensili per aggirare gli stalli. La visita di controllo non è un esame, ma il momento per ritarare il bersaglio insieme.</p>
+                </div>
+                <div class="serv-card reveal delay-3">
+                    <h3>Educazione Alimentare</h3>
+                    <p>Non basterà seguire un foglio. Durante le nostre sedute assorbirai conoscenze pratiche per creare tu stesso i tuoi piatti in piena autonomia, in ogni situazione (cene, ferie, uscite).</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container foot-grid">
+            <div class="foot-col">
+                <div class="logo">Dott. Roberto Soave</div>
+                <p>Dietista Nutrizionista e formatore a Roma. Percorsi personalizzati per ritrovare l'energia e combattere l'infiammazione alimentare.</p>
+            </div>
+            <div class="foot-col">
+                <h4>Navigazione</h4>
+                <div class="foot-nav">
+                    <a href="index.html">Homepage</a>
+                    <a href="chi-sono.html">Chi Sono</a>
+                    <a href="servizi.html">Trattamenti</a>
+                    <a href="contatti.html">Contatti</a>
+                </div>
+            </div>
+            <div class="foot-col">
+                <h4>Prenota</h4>
+                <div class="foot-nav">
+                    <a href="https://wa.me/393382809121">WhatsApp +39 338 280 9121</a>
+                    <a>Via Ostia, 10 - Roma</a>
+                </div>
+            </div>
+        </div>
+        <div class="container foot-bottom">
+            <p>&copy; <span id="year"></span> Dott. Roberto Soave. P.IVA 16400781007</p>
+            <p>Sviluppato con dedizione</p>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons(); document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script src="script.js"></script>
+</body>
+</html>

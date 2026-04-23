@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Risolvi il tuo rapporto con il cibo alla radice. Scopri i percorsi personalizzati del Dott. Roberto Soave a Roma.">
+    <title>Dott. Roberto Soave | Dietista Nutrizionista Roma</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;800&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="navbar" class="glass-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="immagini/logo.png" alt="Logo Roberto Soave">
+                <span style="color:#0f172a">Dott. Roberto Soave</span>
+            </a>
+            <button class="mobile-toggle" aria-label="Menu" id="menu-btn"><i data-lucide="menu"></i></button>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html" style="color: var(--clr-primary);">Home</a>
+                <a href="chi-sono.html">Chi Sono</a>
+                <a href="servizi.html">Servizi</a>
+                <a href="contatti.html">Contatti</a>
+                <a href="https://wa.me/393382809121" target="_blank" class="btn btn-wa" style="margin-left:1rem;">
+                    Prenota Ora
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Dark Hero -->
+    <section class="hero-section">
+        <!-- Slight dark gradient behind for depth without blobs -->
+        <div style="position:absolute; top:0; left:0; width:100%; height:100%; background: radial-gradient(circle at 70% 30%, rgba(95, 165, 63, 0.15) 0%, transparent 60%); z-index: 1;"></div>
+        
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="reveal">Il cibo è il tuo più forte alleato.</h1>
+                <p class="reveal delay-1">Non una punizione. Non una rinuncia. A Roma, il percorso definitivo per risolvere il controllo del peso alla radice.</p>
+                <div class="hero-buttons reveal delay-2">
+                    <a href="https://wa.me/393382809121" target="_blank" class="btn btn-primary">Prenota Valutazione</a>
+                    <a href="#metodo" class="btn btn-outline-light">Scopri il Metodo</a>
+                </div>
+            </div>
+            <div class="hero-image reveal delay-1">
+                <img src="immagini/roberto-soave-foto.png" alt="Dott. Roberto Soave">
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Quote -->
+    <section class="quote-section">
+        <div class="container">
+            <p class="reveal">Il Problema non è il Cibo</p>
+            <h2 class="reveal delay-1">"Hai provato decine di diete miracolose, integratori promossi online e regimi restrittivi. Funzionano per un mese, poi la frustrazione torna. Perché? Perché stai trattando il sintomo, non l'educazione alla base."</h2>
+            <div class="reveal delay-2" style="font-family: var(--font-heading); font-weight: 800; font-size: 1.2rem;">— Dott. Roberto Soave</div>
+        </div>
+    </section>
+
+    <!-- Method (The Fisioproject Style Grid) -->
+    <section id="metodo" class="method-section bg-light">
+        <div class="container">
+            <div class="method-header reveal">
+                <div class="method-subtitle">Il Metodo Soave</div>
+                <h2>Un percorso in 3 step studiato per <br>renderti finalmente indipendente.</h2>
+            </div>
+
+            <div class="method-grid">
+                <div class="method-card reveal">
+                    <span class="step-number">01</span>
+                    <h3>Studio Accurato</h3>
+                    <p>Non la solita bilancia. Un'analisi approfondita di anamnesi clinica e impedenziometria per capire esattamente cosa serve al tuo corpo.</p>
+                </div>
+                <div class="method-card reveal delay-1">
+                    <span class="step-number">02</span>
+                    <h3>Piano Mirato</h3>
+                    <p>Tabella nutrizionale scientifica cucita sui tuoi ritmi di vita. Nessuna fotocopia, nessun obbligo impossibile. Solo quello che funziona per te.</p>
+                </div>
+                <div class="method-card reveal delay-2">
+                    <span class="step-number">03</span>
+                    <h3>Educazione Attiva</h3>
+                    <p>Il passo decisivo. Ti insegno a gestire i pasti liberi e leggere le etichette con un solo obiettivo: renderti indipendente al 100%.</p>
+                </div>
+            </div>
+            
+            <div class="text-center reveal" style="margin-top: 5rem;">
+                <a href="servizi.html" class="btn btn-primary">Approfondisci i Trattamenti</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dark Reviews -->
+    <section class="reviews-hero">
+        <div class="container">
+            <h2 class="reveal">I Risultati Parlano.</h2>
+            <p class="reveal delay-1" style="font-size: 1.2rem; color: var(--clr-text-muted-dark);">Quello che dicono i pazienti dopo aver concluso il percorso.</p>
+            
+            <div class="counter-box reveal delay-2">
+                <span id="review-counter">0.0</span>
+            </div>
+            <div class="stars-display reveal delay-2">
+                <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+            </div>
+            
+            <div class="carousel-container reveal delay-3">
+                <div class="carousel-track">
+                    <!-- Cards -->
+                    <div class="review-card">
+                        <div class="r-stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Professionista serio e preparato. Con lui ho imparato a mangiare sano senza la solita fame. I risultati sul mio corpo sono lampanti. Consigliatissimo!"</p>
+                        <div class="reviewer-info">
+                            <strong>Gianni Rossi</strong>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="r-stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Il Dott. Soave è riuscito a farmi raggiungere il benessere in modo naturale. La sua empatia ti aiuta a superare i blocchi senza mai farti pesare gli sgorri."</p>
+                        <div class="reviewer-info">
+                            <strong>Simona B.</strong>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="r-stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Ottima esperienza. Entri nello studio sentendoti un numero, ne esci con un file interamente cucito sui tuoi bisogni. Da consigliare a chiunque."</p>
+                        <div class="reviewer-info">
+                            <strong>Marco V.</strong>
+                        </div>
+                    </div>
+                    <!-- Cloned -->
+                    <div class="review-card">
+                        <div class="r-stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Professionista serio e preparato. Con lui ho imparato a mangiare sano senza la solita fame. I risultati sul mio corpo sono lampanti. Consigliatissimo!"</p>
+                        <div class="reviewer-info">
+                            <strong>Gianni Rossi</strong>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="r-stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Il Dott. Soave è riuscito a farmi raggiungere il benessere in modo naturale. La sua empatia ti aiuta a superare i blocchi senza mai farti pesare gli sgorri."</p>
+                        <div class="reviewer-info">
+                            <strong>Simona B.</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container foot-grid">
+            <div class="foot-col">
+                <div class="logo">Dott. Roberto Soave</div>
+                <p>Dietista Nutrizionista e formatore a Roma. Percorsi personalizzati per ritrovare l'energia e combattere l'infiammazione alimentare.</p>
+            </div>
+            <div class="foot-col">
+                <h4>Navigazione</h4>
+                <div class="foot-nav">
+                    <a href="index.html">Homepage</a>
+                    <a href="chi-sono.html">Chi Sono</a>
+                    <a href="servizi.html">Trattamenti</a>
+                    <a href="contatti.html">Contatti</a>
+                </div>
+            </div>
+            <div class="foot-col">
+                <h4>Prenota</h4>
+                <div class="foot-nav">
+                    <a href="https://wa.me/393382809121">WhatsApp +39 338 280 9121</a>
+                    <a>Via Ostia, 10 - Roma</a>
+                </div>
+            </div>
+        </div>
+        <div class="container foot-bottom">
+            <p>&copy; <span id="year"></span> Dott. Roberto Soave. P.IVA 16400781007</p>
+            <p>Sviluppato con dedizione</p>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons(); document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script src="script.js"></script>
+</body>
+</html>

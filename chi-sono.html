@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Sono | Dott. Roberto Soave</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="navbar" class="glass-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="immagini/logo.png" alt="Logo Roberto Soave">
+                <span style="color:#0f172a">Dott. Roberto Soave</span>
+            </a>
+            <button class="mobile-toggle" aria-label="Menu" id="menu-btn"><i data-lucide="menu"></i></button>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="chi-sono.html" style="color: var(--clr-primary);">Chi Sono</a>
+                <a href="servizi.html">Servizi</a>
+                <a href="contatti.html">Contatti</a>
+                <a href="https://wa.me/393382809121" target="_blank" class="btn btn-wa" style="margin-left:1rem;">
+                    Prenota Ora
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="bio-cinematic">
+        <div class="bio-img reveal"></div>
+        <div class="bio-content-wrapper">
+            <h2 class="reveal delay-1">Roberto Soave</h2>
+            <h3 class="reveal delay-1">Dietista & Educatore Alimentare</h3>
+            <p class="reveal delay-2">La dieta non deve essere vista come una punizione o una restrizione severa. Accolgo le persone nel mio studio ascoltandole realmente, incasellando un puzzle clinico su misura per la loro vita.</p>
+            <p class="reveal delay-2">Elaboro piani nutrizionali basati sul vero stile di vita della persona, garantendo risultati solidi nel tempo. La vera meta non è il numero sulla bilancia, ma la tua indipendenza. Il cibo smetterà di essere uno stress e diventerà la tua benzina migliore.</p>
+            
+            <ul class="bio-list reveal delay-3">
+                <li><i data-lucide="award"></i> Laureato e regolarmente iscritto all'albo</li>
+                <li><i data-lucide="book-open"></i> Continui corsi di specializzazione</li>
+                <li><i data-lucide="smile"></i> Empatia e disponibilità costante</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container foot-grid">
+            <div class="foot-col">
+                <div class="logo">Dott. Roberto Soave</div>
+                <p>Dietista Nutrizionista e formatore a Roma. Percorsi personalizzati per ritrovare l'energia e combattere l'infiammazione alimentare.</p>
+            </div>
+            <div class="foot-col">
+                <h4>Navigazione</h4>
+                <div class="foot-nav">
+                    <a href="index.html">Homepage</a>
+                    <a href="chi-sono.html">Chi Sono</a>
+                    <a href="servizi.html">Trattamenti</a>
+                    <a href="contatti.html">Contatti</a>
+                </div>
+            </div>
+            <div class="foot-col">
+                <h4>Prenota</h4>
+                <div class="foot-nav">
+                    <a href="https://wa.me/393382809121">WhatsApp +39 338 280 9121</a>
+                    <a>Via Ostia, 10 - Roma</a>
+                </div>
+            </div>
+        </div>
+        <div class="container foot-bottom">
+            <p>&copy; <span id="year"></span> Dott. Roberto Soave. P.IVA 16400781007</p>
+            <p>Sviluppato con dedizione</p>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons(); document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script src="script.js"></script>
+</body>
+</html>
