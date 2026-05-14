@@ -9,6 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .serv-grid-4 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 4rem; }
+        @media (max-width: 768px) { .serv-grid-4 { grid-template-columns: 1fr; } }
+        .serv-card-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;}
+        .serv-card-header span { font-family: var(--font-heading); font-size: 2.5rem; font-weight: 800; color: var(--clr-primary); line-height: 1;}
+    </style>
 </head>
 <body>
 
@@ -16,7 +22,7 @@
         <div class="container nav-container">
             <a href="index.html" class="logo">
                 <img src="immagini/logo.png" alt="Logo Roberto Soave">
-                <span style="color:#0f172a">Dott. Roberto Soave</span>
+                <span style="color:#2b3520">Dott. Roberto Soave</span>
             </a>
             <button class="mobile-toggle" aria-label="Menu" id="menu-btn"><i data-lucide="menu"></i></button>
 
@@ -34,26 +40,43 @@
 
     <main class="serv-page">
         <div class="container">
-            <div class="method-subtitle reveal">Cosa possiamo risolvere</div>
-            <h2 class="reveal delay-1" style="font-size: 3.5rem; color:var(--clr-bg-dark)">I Trattamenti</h2>
+            <div class="method-subtitle reveal">Un vestito cucito su misura</div>
+            <h2 class="reveal delay-1" style="font-size: 3.5rem; color:var(--clr-bg-dark)">Il Percorso in 4 Fasi</h2>
+            <p class="reveal delay-2" style="font-size: 1.1rem; color: var(--clr-text-muted); max-width: 800px; margin-top: 1rem;">Dal bambino all'anziano, non esiste una dieta universale. Il mio approccio si basa sull'ascolto scientifico e metodico del tuo corpo, senza costrizioni.</p>
             
-            <div class="serv-grid">
+            <div class="serv-grid-4">
                 <div class="serv-card reveal delay-2">
-                    <h3>Prima Visita Dietistica</h3>
-                    <p>Un'analisi completa e approfondita della tua composizione corporea e delle tue abitudini alimentari per fissare gli obiettivi concreti e scientifici sul lungo periodo.</p>
+                    <div class="serv-card-header">
+                        <span>01</span>
+                        <h3 style="margin:0; color: var(--clr-bg-dark);">L'Anamnesi Profonda</h3>
+                    </div>
+                    <p>Inizio sempre con un lungo colloquio approfondito. Ho bisogno di capire chi sei: eventuali patologie cliniche, storia familiare, eredità genetiche e soprattutto le tue reali abitudini alimentari. Scopriamo cosa ti piace e cosa non sopporti.</p>
                 </div>
                 <div class="serv-card reveal delay-3">
-                    <h3>Piano Nutrizionale</h3>
-                    <p>Elaborazione di un regime alimentare personalizzato che supporta il tuo metabolismo, ottimizza i nutrienti in base al tuo stile di lavoro e ti rende invincibile.</p>
+                    <div class="serv-card-header">
+                        <span>02</span>
+                        <h3 style="margin:0; color: var(--clr-bg-dark);">Misure & Bioimpedenziometria</h3>
+                    </div>
+                    <p>Passiamo alla pratica. Prima l'antropometria con un semplice metro da sarto (polso, torace, addome, fianchi). Poi lo <strong>screening Bioimpedenziometrico (BIA)</strong>: un esame clinico indolore di 2 minuti con elettrodi per "fotografare" la tua vera composizione di massa grassa, massa magra e idratazione corporea.</p>
                 </div>
                 <div class="serv-card reveal delay-2">
-                    <h3>Visita di Controllo</h3>
-                    <p>Aggiustamenti strategici mensili per aggirare gli stalli. La visita di controllo non è un esame, ma il momento per ritarare il bersaglio insieme.</p>
+                    <div class="serv-card-header">
+                        <span>03</span>
+                        <h3 style="margin:0; color: var(--clr-bg-dark);">Piano e Supporto Costante</h3>
+                    </div>
+                    <p>Entro qualche giorno riceverai via email il tuo file PDF con la dieta dettagliata, arricchita da consigli sui metodi di cottura. <strong>Il valore aggiunto?</strong> Per tutto il mese avrai un filo diretto costante con me su WhatsApp per qualsiasi dubbio o emergenza (cenoni, cambi di programma). Il supporto è incluso.</p>
                 </div>
                 <div class="serv-card reveal delay-3">
-                    <h3>Educazione Alimentare</h3>
-                    <p>Non basterà seguire un foglio. Durante le nostre sedute assorbirai conoscenze pratiche per creare tu stesso i tuoi piatti in piena autonomia, in ogni situazione (cene, ferie, uscite).</p>
+                    <div class="serv-card-header">
+                        <span>04</span>
+                        <h3 style="margin:0; color: var(--clr-bg-dark);">Visita di Follow-Up</h3>
+                    </div>
+                    <p>Ci rivedremo dopo circa 3-5 settimane. Questa non è un'interrogazione, ma un'analisi strategica dei risultati. Ripeteremo l'esame della massa corporea (BIA) per osservare graficamente i miglioramenti reali e aggiusteremo il tiro per renderti progressivamente sempre più autonomo.</p>
                 </div>
+            </div>
+            
+            <div class="text-center reveal" style="margin-top: 4rem;">
+                <a href="https://wa.me/393382809121" class="btn btn-primary">Inizia Ora il tuo Percorso</a>
             </div>
         </div>
     </main>
@@ -83,7 +106,7 @@
         </div>
         <div class="container foot-bottom">
             <p>&copy; <span id="year"></span> Dott. Roberto Soave. P.IVA 16400781007</p>
-            <p>Sviluppato con dedizione</p>
+            <p>Sviluppato da Patrick Damiani</p>
         </div>
     </footer>
 

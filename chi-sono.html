@@ -9,6 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .bio-content-wrapper { padding: 4rem 6rem; overflow-y: auto;}
+        .bio-section-title { font-family: var(--font-heading); color: var(--clr-primary-dark); font-size: 1.5rem; margin-top: 2rem; margin-bottom: 0.5rem; }
+    </style>
 </head>
 <body>
 
@@ -16,7 +20,7 @@
         <div class="container nav-container">
             <a href="index.html" class="logo">
                 <img src="immagini/logo.png" alt="Logo Roberto Soave">
-                <span style="color:#0f172a">Dott. Roberto Soave</span>
+                <span style="color:#2b3520">Dott. Roberto Soave</span>
             </a>
             <button class="mobile-toggle" aria-label="Menu" id="menu-btn"><i data-lucide="menu"></i></button>
 
@@ -35,15 +39,22 @@
     <main class="bio-cinematic">
         <div class="bio-img reveal"></div>
         <div class="bio-content-wrapper">
-            <h2 class="reveal delay-1">Roberto Soave</h2>
-            <h3 class="reveal delay-1">Dietista & Educatore Alimentare</h3>
-            <p class="reveal delay-2">La dieta non deve essere vista come una punizione o una restrizione severa. Accolgo le persone nel mio studio ascoltandole realmente, incasellando un puzzle clinico su misura per la loro vita.</p>
-            <p class="reveal delay-2">Elaboro piani nutrizionali basati sul vero stile di vita della persona, garantendo risultati solidi nel tempo. La vera meta non è il numero sulla bilancia, ma la tua indipendenza. Il cibo smetterà di essere uno stress e diventerà la tua benzina migliore.</p>
+            <h2 class="reveal delay-1">Dott. Roberto Soave</h2>
+            <h3 class="reveal delay-1">Dietista & Esperto di Nutrizione Clinica</h3>
+            
+            <h4 class="bio-section-title reveal delay-2">La Formazione Clinica</h4>
+            <p class="reveal delay-2">Il mio percorso inizia con la <strong>Laurea in Dietistica nel 2006</strong> presso l'Università Cattolica di Roma. Ho consolidato le mie basi scientifiche attraverso una tesi sperimentale (divenuta poi pubblicazione) e frequentando per anni i reparti di <strong>endocrinologia e dietologia</strong>. Questo mi ha permesso di sviluppare un approccio rigorosamente medico alla nutrizione.</p>
+            
+            <h4 class="bio-section-title reveal delay-2">L'Esperienza Aziendale e il Problem Solving</h4>
+            <p class="reveal delay-2">Non mi sono fermato alla teoria. Per oltre 10 anni ho lavorato sul campo nella grande ristorazione collettiva e ospedaliera, ricoprendo ruoli di altissima responsabilità gestionale e commerciale per colossi del settore. Ho gestito protocolli HACCP, mense cliniche e gare d'appalto. Questa "vita in viaggio" mi ha forgiato, insegnandomi l'<strong>organizzazione estrema</strong> e il problem solving. Nel 2021, ho scelto di fermarmi per dedicare tutta questa esperienza all'ascolto "uno a uno" dei miei pazienti, aprendo il mio studio a Roma.</p>
+            
+            <h4 class="bio-section-title reveal delay-2">Il Dietista con l'anima da Cuoco</h4>
+            <p class="reveal delay-3">L'ingrediente segreto del mio metodo? La profonda passione per la cucina. Ho un passato da cuoco e conosco intimamente i metodi di cottura e la preparazione delle materie prime. Quando elaboro un piano alimentare, <strong>non consegno mai un foglio triste con "50g di riso in bianco"</strong>, ma fornisco veri consigli culinari pratici e gustosi. La dieta deve essere un piacere sostenibile, non una punizione da sopportare.</p>
             
             <ul class="bio-list reveal delay-3">
                 <li><i data-lucide="award"></i> Laureato e regolarmente iscritto all'albo</li>
-                <li><i data-lucide="book-open"></i> Continui corsi di specializzazione</li>
-                <li><i data-lucide="smile"></i> Empatia e disponibilità costante</li>
+                <li><i data-lucide="microscope"></i> Background nella ricerca clinica (Endocrinologia)</li>
+                <li><i data-lucide="chef-hat"></i> Forte competenza nelle tecniche di cottura sane</li>
             </ul>
         </div>
     </main>
@@ -73,7 +84,7 @@
         </div>
         <div class="container foot-bottom">
             <p>&copy; <span id="year"></span> Dott. Roberto Soave. P.IVA 16400781007</p>
-            <p>Sviluppato con dedizione</p>
+            <p>Sviluppato da Patrick Damiani</p>
         </div>
     </footer>
 

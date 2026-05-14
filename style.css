@@ -138,7 +138,7 @@ img { max-width: 100%; height: auto; display: block; }
 .method-header h2 { font-size: 3rem; color: var(--clr-bg-dark); }
 
 .method-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;
 }
 .method-card {
   background: white; padding: 2.5rem 2rem; border-radius: 16px; 
