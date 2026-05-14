@@ -34,8 +34,7 @@ body {
   background-color: var(--clr-bg-white);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-  position: relative;
+  /* Rimosso overflow-x: hidden per evitare il bug di Safari sul position: fixed */
 }
 
 /* Texture Fotografica (Grain Noise) Globale */
