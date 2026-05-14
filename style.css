@@ -43,7 +43,7 @@ body::after {
   position: fixed;
   top: 0; left: 0; width: 100vw; height: 100vh;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 99; /* Abbassato per non interferire con navbar sticky */
   opacity: 0.04;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
@@ -90,18 +90,20 @@ img { max-width: 100%; height: auto; display: block; }
 .delay-2 { transition-delay: 0.2s; }
 .delay-3 { transition-delay: 0.3s; }
 
-/* Navbar - Clean and solid when scrolled */
+/* Navbar - Sticky: immune al bug di iOS con position:fixed */
 .glass-header {
-  position: fixed; top: 0; left: 0; width: 100%; z-index: 9999;
-  padding: 1.5rem 0; background: transparent;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  width: 100%; z-index: 10000;
+  padding: 1.5rem 0;
+  background: rgba(255, 255, 255, 0.95);
   border-bottom: 1px solid rgba(0,0,0,0.05);
   transition: padding 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 .glass-header.scrolled {
   padding: 1rem 0; background: rgba(255, 255, 255, 0.98); box-shadow: var(--shadow-subtle); border-bottom: none;
 }
-/* When header is dark we invert colors if needed... for now we keep it always white/light because it sits on white/gray. */
-.glass-header { background: rgba(255, 255, 255, 0.95); }
 
 .nav-container { display: flex; justify-content: space-between; align-items: center; }
 .logo { display: flex; align-items: center; gap: 0.75rem; font-family: var(--font-heading); font-weight: 800; font-size: 1.25rem; color: var(--clr-bg-dark); }
@@ -114,14 +116,9 @@ img { max-width: 100%; height: auto; display: block; }
 /* Hero Section */
 .hero-section {
   position: relative; min-height: 90vh; display: flex; align-items: center; 
-  padding-top: 100px;
+  padding-top: 2rem; padding-bottom: 2rem;
   background-color: var(--clr-bg-dark);
   color: white; overflow: hidden;
-  /* Simple Parallax */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 .hero-container {
   display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 4rem; position: relative; z-index: 2;
@@ -170,7 +167,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Chi Sono (Edge to Edge Cinematic) */
 .bio-cinematic {
-  display: flex; min-height: 100vh; padding-top: 80px; align-items: stretch;
+  display: flex; min-height: 100vh; align-items: stretch;
 }
 .bio-img {
   width: 50vw; background: url('immagini/roberto-soave-sulla-scrivania.JPG') no-repeat center center;
@@ -188,7 +185,7 @@ img { max-width: 100%; height: auto; display: block; }
 .bio-list i { color: var(--clr-primary); }
 
 /* All Services Page Grid */
-.serv-page { padding: 10rem 0 6rem 0; background-color: var(--clr-bg-light); min-height: 80vh; }
+.serv-page { padding: 4rem 0 6rem 0; background-color: var(--clr-bg-light); min-height: 80vh; }
 .serv-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 4rem;}
 .serv-card {
   background: white; padding: 3rem; border-radius: 16px; box-shadow: var(--shadow-elevated);
@@ -226,7 +223,7 @@ img { max-width: 100%; height: auto; display: block; }
 .r-stars { margin-bottom: 1.5rem; font-size: 0.9rem;}
 
 /* Contact Section (Clean Block) */
-.contact-section { padding: 10rem 0 6rem 0; background: var(--clr-bg-white); }
+.contact-section { padding: 4rem 0 6rem 0; background: var(--clr-bg-white); }
 .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 5rem; }
 .contact-text h2 { font-size: 3rem; color: var(--clr-bg-darker); margin-bottom: 1.5rem; }
 .contact-text > p { font-size: 1.1rem; color: var(--clr-text-muted); margin-bottom: 3rem; }
@@ -288,7 +285,7 @@ footer { background: var(--clr-bg-darker); color: white; padding: 5rem 0 2rem 0;
 /* Responsive */
 @media (max-width: 1024px) {
   .hero-container, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .bio-cinematic { flex-direction: column; min-height: auto; padding-top: 80px;}
+  .bio-cinematic { flex-direction: column; min-height: auto;}
   .bio-img { width: 100%; height: 500px; }
   .bio-content-wrapper { width: 100%; padding: 4rem 2rem; }
   .hero-image { justify-content: center; }
