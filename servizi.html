@@ -18,7 +18,10 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .serv-grid-4 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 4rem; }
-        @media (max-width: 768px) { .serv-grid-4 { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) { 
+            .serv-grid-4 { grid-template-columns: 1fr; margin-top: 2rem; gap: 1.5rem; } 
+            .serv-card-header span { font-size: 2rem; }
+        }
         .serv-card-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;}
         .serv-card-header span { font-family: var(--font-heading); font-size: 2.5rem; font-weight: 800; color: var(--clr-primary); line-height: 1;}
     </style>
