@@ -93,10 +93,11 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Navbar - Clean and solid when scrolled */
 .glass-header {
-  position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+  position: fixed; top: 0; left: 0; width: 100%; z-index: 9999;
   padding: 1.5rem 0; background: transparent;
-  border-bottom: 1px solid rgba(0,0,0,0.05); /* or transparent if over dark */
+  border-bottom: 1px solid rgba(0,0,0,0.05);
   transition: padding 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  transform: translateZ(100px); -webkit-transform: translateZ(100px); /* iOS z-index fix */
 }
 .glass-header.scrolled {
   padding: 1rem 0; background: rgba(255, 255, 255, 0.98); box-shadow: var(--shadow-subtle); border-bottom: none;
@@ -255,22 +256,28 @@ footer { background: var(--clr-bg-darker); color: white; padding: 5rem 0 2rem 0;
 .bg-hero-food-dark {
     position: relative;
     background-color: var(--clr-bg-dark) !important;
+    -webkit-clip-path: inset(0); clip-path: inset(0); /* iOS Parallax fix */
 }
 .bg-hero-food-dark::before {
-    content: ''; position: absolute; top:0; left:0; width:100%; height:100%;
+    content: ''; position: fixed; top:0; left:0; width:100vw; height:100vh;
     background-image: url('immagini/green_food_dark.png');
-    background-size: cover; background-position: center; background-attachment: fixed;
-    opacity: 0.15; z-index: 0; pointer-events: none;
+    background-size: cover; background-position: center;
+    opacity: 0.15; z-index: -1; pointer-events: none;
 }
 .parallax-banner {
     position: relative; padding: 12rem 2rem;
-    background-image: url('immagini/green_food_abstract.png');
-    background-size: cover; background-position: center; background-attachment: fixed;
     display: flex; align-items: center; justify-content: center; text-align: center;
+    -webkit-clip-path: inset(0); clip-path: inset(0); /* iOS Parallax fix */
+}
+.parallax-banner::before {
+    content: ''; position: fixed; top:0; left:0; width:100vw; height:100vh;
+    background-image: url('immagini/green_food_abstract.png');
+    background-size: cover; background-position: center;
+    z-index: 0; pointer-events: none;
 }
 .parallax-banner::after {
     content: ''; position: absolute; top:0; left:0; width:100%; height:100%;
-    background: rgba(30, 38, 23, 0.7); z-index: 1;
+    background: rgba(30, 38, 23, 0.7); z-index: 1; pointer-events: none;
 }
 .parallax-banner .banner-text {
     position: relative; z-index: 2; font-family: var(--font-heading);
