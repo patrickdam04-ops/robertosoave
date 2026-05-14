@@ -19,6 +19,13 @@
     <style>
         .bio-content-wrapper { padding: 4rem 6rem; overflow-y: auto;}
         .bio-section-title { font-family: var(--font-heading); color: var(--clr-primary-dark); font-size: 1.5rem; margin-top: 2rem; margin-bottom: 0.5rem; }
+        @media (max-width: 1024px) {
+            .bio-content-wrapper { padding: 2.5rem 1.25rem !important; width: 100% !important; }
+        }
+        @media (max-width: 768px) {
+            .bio-content-wrapper { padding: 2rem 1rem !important; }
+            .bio-section-title { font-size: 1.3rem; }
+        }
     </style>
 </head>
 <body>
